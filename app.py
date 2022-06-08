@@ -17,7 +17,7 @@ alpha={'?':0,'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8,'i':9,'j':10,'k':11
 def Home():
     return render_template("index.html")
 
-@flask_app.route("/predict", methods = ["POST","GET"])
+@flask_app.route("/predict", methods = ["POST"])
 def predict():
     features = [x for x in request.form.values()]
     features=pd.DataFrame(features)
